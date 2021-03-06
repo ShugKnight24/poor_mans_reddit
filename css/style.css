@@ -6,12 +6,12 @@ body {
 }
 
 a {
-	color: #0275d8;
+	color: #0275D8;
 	cursor: pointer;
 }
 
 a:hover {
-	color: #025aa5;
+	color: #025AA5;
 }
 
 #container {
@@ -26,6 +26,27 @@ a:hover {
 
 #subreddit-name {
 	font-family: 'Happy Monkey', cursive;
+}
+
+.subreddit-filter-input {
+	outline: transparent;
+	border: 0;
+	border-bottom: 1px solid #0275D8;
+	width: 225px;
+	font-size: 18px;
+}
+
+.subreddit-search button {
+	background-color: #0275D8;
+	color: #FFF;
+	font-weight: bold;
+	padding: 10px;
+	border: 3px solid #0275D8;
+}
+
+.subreddit-search button:hover {
+	cursor: pointer;
+	background-color: #025AA5;
 }
 
 #reddit-content {

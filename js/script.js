@@ -63,3 +63,16 @@ const makeRedditPosts = (subreddits) => {
 		});
 	});
 }
+
+// Subreddit Search
+let $subSearch = $('.subreddit-search'),
+	$subredditFilterInput = $('.subreddit-filter-input');
+
+$subSearch.on('submit', (event) => {
+	event.preventDefault();
+
+	let desiredSub = $subredditFilterInput.val();
+
+	$('#reddit-content').empty();
+	makeRedditPosts(desiredSub);
+})
