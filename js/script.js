@@ -13,9 +13,9 @@ const makeRedditPosts = (subreddits) => {
 
 		let redditJSON = data.data.children;
 
-		for (var i = 0; i <= redditJSON.length - 1; i++){
+		redditJSON.map((redditPost, index) => {
 
-			let jsonPath = redditJSON[i].data,
+			let jsonPath = redditJSON[index].data,
 				subreddit = jsonPath.subreddit,
 				thumbnail = jsonPath.thumbnail,
 				imageUrl = jsonPath.url,
@@ -24,9 +24,9 @@ const makeRedditPosts = (subreddits) => {
 				titleUrl = jsonPath.permalink;
 
 			// TODO: do something for self & text posts...
-			if (thumbnail === 'self') continue;
+			if (thumbnail === 'self') return false;
 
-			if (i === 0 ) {
+			if (index === 0 ) {
 				$('#subreddit-name').html('/r/' + subreddit);
 			}
 
@@ -60,6 +60,6 @@ const makeRedditPosts = (subreddits) => {
 					</div>
 				</div>
 			`);
-		};
+		});
 	});
 }
