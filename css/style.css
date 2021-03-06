@@ -28,20 +28,35 @@ a:hover {
 	font-family: 'Happy Monkey', cursive;
 }
 
-.post {
-	max-width: 768px;
-	margin: 0 auto;
-	border: 1px solid #0275d8;
+#reddit-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.image-container {
+.post {
+	width: 90%;
+	padding: 0 5%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 	margin-top: 20px;
 }
 
+.image-container {
+	margin-right: 20px;
+}
+
+.user_post_info {
+	text-align: left;
+}
+
 .post-title {
-	width: 50%;
+	width: 100%;
 	margin: 0 auto 20px;
 	font-family: 'Merriweather', serif;
+	font-size: 24px;
 }
 
 #add-more-container {
